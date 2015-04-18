@@ -40,8 +40,19 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
+        String des = null;
+        if(position == 0){
+            des = "Here are your chats!";
+        }else if(position == 1) {
+            des = "Let's Make Friends!";
+        }else if(position == 2) {
+            des = "Here are your friend lists!";
+        }else if(position == 3) {
+            des = "GapChat Pre Release V1.0";
+        }
+
         // update the main content by replacing fragments
-        Toast.makeText(this, "Menu item selected -> " + position, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, des, Toast.LENGTH_SHORT).show();
     }
 
 
